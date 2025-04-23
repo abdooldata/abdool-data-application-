@@ -22,7 +22,7 @@ Abdool Data Application is a data management web application designed to provide
 - **Frontend:** HTML, Tailwind CSS, JavaScript
 - **Backend:** Node.js (for SMS verification and other back-end services)
 - **Payment Integration:** Paystack (for payments)
-- **SMS Verification:** Twilio
+- **SMS Verification:** Twilio (Twilio Verify API)
 
 ## Installation
 
@@ -37,7 +37,7 @@ Abdool Data Application is a data management web application designed to provide
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/abdool-data-application.git
+   git clone https://github.com/abdooldata-app/abdool-data-application.git
    cd abdool-data-application
 
 2. Install dependencies (for backend setup):
@@ -47,10 +47,10 @@ npm install
 
 3. Create a .env file and add your Twilio and Paystack keys:
 
-TWILIO_ACCOUNT_SID=AC8a2ca4235af75173d6a804a33c4656df
-TWILIO_AUTH_TOKEN=33c0e1c16cacbbe4ea988068990b5992
-TWILIO_VERIFY_SID=VA33be0e09cf12d212245485efaf33395c
-PAYSTACK_PUBLIC_KEY=pk_live_fefa4cab21e99bd551e0979a445038b389d9cfea
+TWILIO_ACCOUNT_SID=your_account_sid
+TWILIO_AUTH_TOKEN=your_auth_token
+TWILIO_VERIFY_SID=your_verify_sid
+PAYSTACK_PUBLIC_KEY=your_paystack_public_key
 
 
 4. Start the app:
@@ -59,6 +59,40 @@ npm start
 
 
 5. Open your browser and visit http://localhost:3000.
+
+
+
+Twilio Setup
+
+To integrate Twilio for SMS verification, you need to create a Twilio account and get your Twilio credentials. Follow these steps:
+
+1. Create a Twilio Account: Visit Twilio and sign up for an account.
+
+
+2. Get Account SID and Auth Token: Once you sign up, you will get your Account SID and Auth Token from the Twilio Console.
+
+
+3. Get the Verify SID: You can create a Verify Service in the Twilio Console to get the Verify SID for sending SMS verification codes.
+
+
+4. Set Environment Variables: Add your Twilio credentials to the .env file as shown below:
+
+TWILIO_ACCOUNT_SID=your_account_sid
+TWILIO_AUTH_TOKEN=your_auth_token
+TWILIO_VERIFY_SID=your_verify_sid
+
+
+
+Paystack Setup
+
+To integrate Paystack for payments, you will need your Paystack public key. You can get this from the Paystack dashboard.
+
+1. Get Paystack Public Key: Log in to your Paystack account and navigate to the "API Keys & Webhooks" section.
+
+
+2. Set Environment Variables: Add your Paystack public key to the .env file as shown below:
+
+PAYSTACK_PUBLIC_KEY=your_paystack_public_key
 
 
 
@@ -83,4 +117,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 Contact
 
-For any questions, please contact us at auh439@gmail.com
+For any questions, please contact us at auh439@gmail.com.
