@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdool Data Application</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://js.paystack.co/inline.js"></script>
+</head>
+<body class="bg-gray-100">
+
+    <div class="flex justify-center items-center min-h-screen">
+        <div class="bg-white p-8 rounded shadow-md w-96">
+            <h2 class="text-center text-2xl font-bold mb-4">Abdool Data Application</h2>
+            
+            <form id="sign-up-form">
+                <div class="mb-4">
+                    <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
+                    <input type="text" id="phone" class="mt-1 p-2 w-full border border-gray-300 rounded" placeholder="Enter your phone number">
+                </div>
+
+                <button type="submit" class="w-full bg-blue-500 text-white p-2 rounded">Sign Up / Login</button>
+            </form>
+
+            <div class="mt-4 text-center">
+                <button id="paystack-btn" class="bg-green-500 text-white p-2 rounded w-full">Proceed to Payment</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Paystack Payment integration
+        document.getElementById('paystack-btn').addEventListener('click', function () {
+            var handler = PaystackPop.setup({
+                key: 'your_paystack_public_key', // Replace with your Paystack public key
+                email: 'user@example.com',
+                amount: 1000, // Payment amount in kobo
+                currency: "NGN",
+                callback: function(response) {
+                    alert('Payment complete! Reference: ' + response.reference);
+                },
+                onClose: function() {
+                    alert('Transaction was not completed.');
+                }
+            });
+            handler.openIframe();
+        });
+
+        // Twilio SMS Verification - Simulated
+        document.getElementById('sign-up-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            var phoneNumber = document.getElementById('phone').value;
+            if (phoneNumber) {
+                fetch('/send-sms-verification', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ phone: phoneNumber })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    alert('A verification code has been sent to ' + phoneNumber);
+                })
+                .catch(error => {
+                    alert('Failed to send verification code.');
+                });
+            } else {
+                alert('Please enter a phone number');
+            }
+        });
+    </script>
+
+</body>
+</html>
