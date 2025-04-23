@@ -47,10 +47,10 @@ npm install
 
 3. Create a .env file and add your Twilio and Paystack keys:
 
-TWILIO_ACCOUNT_SID=your_account_sid
-TWILIO_AUTH_TOKEN=your_auth_token
-TWILIO_VERIFY_SID=your_verify_sid
-PAYSTACK_PUBLIC_KEY=your_paystack_public_key
+TWILIO_ACCOUNT_SID=AC8a2ca4235af75173d6a804a33c4656df
+TWILIO_AUTH_TOKEN=33c0e1c16cacbbe4ea988068990b5992
+TWILIO_VERIFY_SID=VA33be0e09cf12d212245485efaf33395c
+PAYSTACK_PUBLIC_KEY=pk_live_fefa4cab21e99bd551e0979a445038b389d9cfea
 
 
 4. Start the app:
@@ -83,4 +83,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 Contact
 
-For any questions, please contact us at auh439@gmail.com.
+For any questions, please contact us at auh439@gmail.com
