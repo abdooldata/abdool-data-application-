@@ -1,67 +1,81 @@
 # Abdool Data Application
 
-## Overview
-abdool-data-application- is a versatile data management tool built using HTML, JavaScript, and Paystack for payment integration. The application provides features like Airtime Purchase, Data Purchase, Cable TV Subscription, Electricity Payment, and Complaint Filing. It integrates SMS verification via Twilio and allows seamless payments.
+Abdool Data Application is a data management web application designed to provide users with various features such as:
+
+- **Sign Up / Login**
+- **Dashboard** for managing data
+- **SMS Verification** via Twilio for user authentication
+- **Paystack Integration** for payments (Airtime, Data, Cable, Electricity)
+- **File Complaints** and view user history
+- **Full User Interaction** with various functionalities like buying airtime, data, and paying bills.
 
 ## Features
-- **Sign Up & Login:** Users can sign up and log in with their phone numbers.
-- **SMS Verification:** Users receive an SMS verification code to authenticate their phone numbers.
-- **Paystack Integration:** Allows users to make payments for services using Paystack.
-- **Dashboard:** After successful login, users can access a variety of services such as Airtime, Data, Cable, and Electricity bill payments.
-- **Complaint Filing & History:** Users can file complaints and view their service history.
 
-## Technologies Used
-- **Frontend:** HTML, TailwindCSS, JavaScript
-- **Backend:** Node.js (optional if implementing backend services like verification)
-- **Payment Gateway:** Paystack
+- **User Authentication:** Users must register and log in before accessing the dashboard.
+- **SMS Verification:** Users are verified via SMS using Twilio's SMS service.
+- **Paystack Payment Integration:** Seamlessly buy airtime, data, cable TV subscriptions, and pay electricity bills.
+- **Complaints & History:** Users can file complaints and view their transaction history.
+- **Responsive Design:** Fully responsive and mobile-friendly UI built using Tailwind CSS.
+
+## Tech Stack
+
+- **Frontend:** HTML, Tailwind CSS, JavaScript
+- **Backend:** Node.js (for SMS verification and other back-end services)
+- **Payment Integration:** Paystack (for payments)
 - **SMS Verification:** Twilio
 
-## Setup and Installation
+## Installation
 
-1. **Clone the Repository**
+### Prerequisites
+
+- Node.js and npm installed on your machine.
+- Twilio account with access to the Verify API.
+- Paystack account for live payment integration.
+
+### Steps to Install:
+
+1. Clone the repository:
+
    ```bash
    git clone https://github.com/yourusername/abdool-data-application.git
    cd abdool-data-application
 
-2. Setup Twilio
+2. Install dependencies (for backend setup):
 
-Create a Twilio account at Twilio.
-
-Get your Twilio Account SID, Auth Token, and Verify Service SID.
-
-Update the JavaScript code to include your Twilio credentials.
+npm install
 
 
+3. Create a .env file and add your Twilio and Paystack keys:
 
-3. Paystack Integration
-
-Create a Paystack account at Paystack.
-
-Use the Paystack public key in your application for handling payments.
-
-Update the Paystack public key in the script provided in the HTML file.
+TWILIO_ACCOUNT_SID=your_account_sid
+TWILIO_AUTH_TOKEN=your_auth_token
+TWILIO_VERIFY_SID=your_verify_sid
+PAYSTACK_PUBLIC_KEY=your_paystack_public_key
 
 
+4. Start the app:
 
-4. Running the Application
+npm start
 
-Since this is a frontend application, no backend is needed for running the HTML file.
 
-Open the index.html file in a browser to interact with the application.
+5. Open your browser and visit http://localhost:3000.
 
 
 
+Usage
 
-Folder Structure
+Sign Up: Enter your phone number to create a new account.
 
-abdool-data-application/
-│
-├── index.html          # Main HTML file with the app's structure and logic
-└── README.md           # Project README file
+Login: Use your registered phone number to log in.
 
-Contributions
+Dashboard: Access all features after logging in, including purchasing airtime, data, and making payments.
 
-Feel free to fork the repository and contribute by making pull requests.
+SMS Verification: A verification code will be sent to your phone for both signup and login.
+
+
+Contribution
+
+Feel free to fork the project, make improvements, and submit pull requests. If you encounter any issues or have feature requests, please open an issue in the GitHub repository.
 
 License
 
@@ -69,4 +83,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 Contact
 
-For support or inquiries, contact us at: auh439@gmail.com.
+For any questions, please contact us at auh439@gmail.com.
