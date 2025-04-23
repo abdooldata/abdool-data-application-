@@ -1,7 +1,7 @@
 # Abdool Data Application
 
 ## Overview
-Abdool Data Application- is a versatile data management tool built using HTML, JavaScript, and Paystack for payment integration. The application provides features like Airtime Purchase, Data Purchase, Cable TV Subscription, Electricity Payment, and Complaint Filing. It integrates SMS verification via Twilio and allows seamless payments.
+abdool-data-application- is a versatile data management tool built using HTML, JavaScript, and Paystack for payment integration. The application provides features like Airtime Purchase, Data Purchase, Cable TV Subscription, Electricity Payment, and Complaint Filing. It integrates SMS verification via Twilio and allows seamless payments.
 
 ## Features
 - **Sign Up & Login:** Users can sign up and log in with their phone numbers.
